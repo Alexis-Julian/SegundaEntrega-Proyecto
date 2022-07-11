@@ -1,0 +1,30 @@
+.main{
+    background-color: $segundo;
+    .main__informacion{
+        font-size: 100px;
+        font-weight: 800;
+        letter-spacing: -.06em;
+        margin: 0 0 16px;
+        & span:nth-child(1n){
+            color:($segundo) ;
+            /* font-family: verdana; */
+            padding: 0 12px;
+            display: block;
+            font-size: 100px;
+            line-height: 1.1;
+            position: relative;
+        }
+        & span::before{
+            background:linear-gradient(90deg, var(--start-color),var(--end-color)) ;
+            content:var(--content);
+            position: absolute;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animated 9s infinite;
+            animation-delay:var(--delay);
+            
+        }
+
+
+    }
+}

@@ -1,0 +1,25 @@
+.container-grid{
+    display: grid;
+    grid-area: 
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+    height: 100vh;
+}
+
+.header{
+    display: grid;
+    grid-template-areas: header;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.main{
+    display: grid;
+    grid-template-areas: main;
+}
+
+.footer{
+    display: grid;
+    grid-template-areas: footer;
+}

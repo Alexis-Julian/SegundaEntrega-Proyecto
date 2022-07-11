@@ -1,0 +1,129 @@
+@keyframes icono {
+  0% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(10px); } }
+
+@keyframes sombra {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.1; } }
+
+@keyframes animated {
+  0% {
+    opacity: 1; }
+  16% {
+    opacity: 1; }
+  33% {
+    opacity: 0; }
+  83% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Righteous', cursive; }
+
+li {
+  list-style: none;
+  display: inline; }
+
+a {
+  text-decoration: none; }
+
+.main {
+  background-color: #3e2c41; }
+  .main .main__informacion {
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -.06em;
+    margin: 0 0 16px; }
+    .main .main__informacion span:nth-child(1n) {
+      color: #3e2c41;
+      /* font-family: verdana; */
+      padding: 0 12px;
+      display: block;
+      font-size: 100px;
+      line-height: 1.1;
+      position: relative; }
+    .main .main__informacion span::before {
+      background: linear-gradient(90deg, var(--start-color), var(--end-color));
+      content: var(--content);
+      position: absolute;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animated 9s infinite;
+      animation-delay: var(--delay); }
+
+.container-grid {
+  display: grid;
+  grid-area: "header header header" "main main main" "footer footer footer";
+  height: 100vh; }
+
+.header {
+  display: grid;
+  grid-template-areas: header;
+  grid-template-columns: repeat(3, 1fr); }
+
+.main {
+  display: grid;
+  grid-template-areas: main; }
+
+.footer {
+  display: grid;
+  grid-template-areas: footer; }
+
+.header {
+  background: linear-gradient(180deg, #261c2c, #3e2c41); }
+  .header .header__logotipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .header .header__logotipo .logo {
+      background-image: url(../../images/vaguito.png);
+      background-size: cover;
+      height: 100px;
+      width: 100px;
+      margin: 10px 0 0 10px;
+      position: relative;
+      animation-name: icono;
+      animation-duration: 1.3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; }
+      .header .header__logotipo .logo::before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        height: 100px;
+        border: 2px groove wheat;
+        width: 100px;
+        background-color: transparent; }
+    .header .header__logotipo .sombra {
+      margin: 10px 0 0 10px;
+      background-color: gray;
+      opacity: 0.1;
+      border-radius: 50%;
+      height: 30px;
+      width: 100px;
+      display: block;
+      animation-name: sombra;
+      animation-duration: 1.3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; }
+  .header .nombre {
+    display: flex;
+    /* justify-content: center;
+        align-items: center; */ }
+    .header .nombre div:nth-child(1n) {
+      text-transform: uppercase;
+      font-family: verdana;
+      font-size: 10em;
+      font-weight: 700;
+      color: white;
+      text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4); }
+
+@keyframes asd {}
