@@ -1,9 +1,16 @@
 @keyframes icono {
     0%{
         transform: translateY(-10px);
+        
+    }
+    25%{
+        transform: translateY(10px);
+    }
+    50%{
+      transform:translateX(-10px);
     }
     100%{
-        transform: translateY(10px);
+      transform:translateX(10px);
     }
 }
 @keyframes sombra{
@@ -32,3 +39,37 @@
         opacity: 1;
     }
 }
+@keyframes h2{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes orbit-spinner-orbit-one-animation {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes orbit-spinner-orbit-two-animation {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes orbit-spinner-orbit-three-animation {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }

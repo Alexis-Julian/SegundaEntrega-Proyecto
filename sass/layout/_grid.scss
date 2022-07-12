@@ -17,9 +17,18 @@
 .main{
     display: grid;
     grid-template-areas: main;
+    grid-template-rows: repeat(2,1fr);
+}
+.main__imagen{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr);
 }
 
 .footer{
     display: grid;
     grid-template-areas: footer;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
 }
