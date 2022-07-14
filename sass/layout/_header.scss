@@ -1,12 +1,12 @@
 .header{
-    background: linear-gradient(180deg,$cuarto ,$segundo);
-    height: 100vh;
-    .header__logotipo{
+ 
+  height: 100vh;
+    &__logotipo{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .logo{
+        .logotipo__img{
             background-image: url(../../images/vaguito.png);
             background-size: cover;
             height: 100px;
@@ -27,27 +27,27 @@
                 background-color: transparent;
             }
            }
-        .sombra{
-         margin:10px 0 0 10px ;
-         background-color: gray;
-         opacity: 0.1;
-         border-radius: 50%;
-         height: 30px;
-         width: 100px;
-         display: block;
-         animation-name: sombra;
-         animation-duration: 1.3s;
-         animation-iteration-count: infinite;
-         animation-direction: alternate;
+        .logotipo__sombra{
+            margin:10px 0 0 10px ;
+            background-color: gray;
+            opacity: 0.1;
+            border-radius: 50%;
+            height: 30px;
+            width: 100px;
+            display: block;
+            animation-name: sombra;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
        }
     }
-    .nombre{
+    &__nombre{
         display: flex;
         align-self: center;
         position: relative;
         font-size: 10rem;
-        color:$cuarto;
-        -webkit-text-stroke: 0.3vw $segundo;
+        color:red;
+        -webkit-text-stroke: 0.3vw orange;
         text-transform: uppercase;
         font-family: 'Roboto', sans-serif;
         font-weight: 800;
@@ -59,7 +59,7 @@
             width: 0%;
             /* height:100%; */
             color: $headerletr;
-            -webkit-text-stroke: 0vw $segundo;
+            /* -webkit-text-stroke: 0vw $segundo; */
             border-right: 2px solid;
             overflow: hidden;
             animation: h2 6s linear infinite alternate;
@@ -85,7 +85,8 @@
         height: 100%;
         border-radius: 50%;
       }
-  
+
+  /* APLICAR FOR Y MIXIN */
       .orbit-spinner .orbit:nth-child(1) {
         left: 0%;
         top: 0%;
@@ -106,4 +107,9 @@
         animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
         border-top: 3px solid $headerletr;
       }
+    &__wave{
+      position: absolute;
+      bottom: 0;
+      
+    }
 }

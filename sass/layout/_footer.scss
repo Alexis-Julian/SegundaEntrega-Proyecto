@@ -1,5 +1,5 @@
 .footer{
-    background: linear-gradient(180deg,$segundo,$tercero);
+    /* background: linear-gradient(180deg,$segundo,$tercero); */
     height: 20vh;
     align-items: center;
     display: flex;
@@ -80,7 +80,7 @@
                 content: "";
                 position: absolute;
                 inset: 2px;
-                background-color: $segundo;
+                /* background-color: $segundo; */
             }
             span,.boton__titulo{
                 font-family: 'Roboto', sans-serif;

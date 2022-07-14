@@ -42,9 +42,11 @@
 @keyframes h2{
     0%{
         width: 0%;
+        -webkit-text-stroke: 0.3vw white;
     }
     100%{
         width: 100%;
+        -webkit-text-stroke: 0.3vw white;
     }
 }
 @keyframes orbit-spinner-orbit-one-animation {
