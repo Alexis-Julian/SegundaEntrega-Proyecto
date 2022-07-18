@@ -1,77 +1,11 @@
-@keyframes icono {
-    0%{
-        transform: translateY(-10px);
-        
-    }
-    25%{
-        transform: translateY(10px);
-    }
-    50%{
-      transform:translateX(-10px);
-    }
-    100%{
-      transform:translateX(10px);
-    }
-}
-@keyframes sombra{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 0.1;
-    }
-}
-@keyframes animated{
-    0%{
-        opacity: 1;
-    }
-    16%{
-        opacity: 1;
-    }
-    33%{
-        opacity: 0;
-    }
-    83%{
-        opacity: 0;
-    }
 
-    100%{
-        opacity: 1;
+
+@mixin media-up($breakpoint){
+    @if map-has-key($breakpoints,$breakpoint){
+        @media screen and (min-width: map-get($breakpoints,$breakpoint)){
+            @content;
+        }
+    } @else{
+        @warn "El valor '#{$breakpoint}' no ha sido declarado";
     }
 }
-@keyframes h2{
-    0%{
-        width: 0%;
-        -webkit-text-stroke: 0.3vw white;
-    }
-    100%{
-        width: 100%;
-        -webkit-text-stroke: 0.3vw white;
-    }
-}
-@keyframes orbit-spinner-orbit-one-animation {
-    0% {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-    }
-    100% {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-    }
-  }
-
-  @keyframes orbit-spinner-orbit-two-animation {
-    0% {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    }
-    100% {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    }
-  }
-
-  @keyframes orbit-spinner-orbit-three-animation {
-    0% {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-    }
-    100% {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-    }
-  }

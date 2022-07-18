@@ -1,0 +1,20 @@
+@for $i from 1 through 6{
+    .list__item:nth-child(#{$i}){
+      margin-top: 10px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+      border-bottom: solid white 1px;
+      
+    }
+    .list__item:hover:nth-child(#{$i}){
+        color:red;
+    }
+  }
+
+@for $i from 1 through 3{
+  .list-red:nth-child(#{$i}){
+    margin: 10px;
+    font-size: 1.5rem;
+  }
+}
